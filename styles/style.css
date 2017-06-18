@@ -1,18 +1,41 @@
-p {
-    font-style: italic;
-}
-article p {
-    font-size: x-small;
-}
-
-article > p {
-    color: red;
+@media (max-width: 500px) {
+    nav {
+        display: block;
+    }
 }
 
-article > section > p {
-    color: blue;
+@media print {
+    nav {
+        display: block;
+    }
+    body {
+        background-color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    aside {
+        background-color: white;
+        color: black;
+        padding: 10px;
+        margin: 5px;
+    }
 }
 
-article >section > p:last-child {
-    font-weight: bold;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #506566;
+}
+
+aside {
+    background-color: #23354B;
+    color: #CDB09E;
+    padding: 25px;
+    margin: 5px;
+}
+
+nav {
+    display: flex;
+}
+
+nav > aside {
+    flex: 1;
 }
