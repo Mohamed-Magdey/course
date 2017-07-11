@@ -1,27 +1,12 @@
 
-function handleClick(callback) {
-    alert('This button has been clicked');
-    if (callback) {
-        callback();
-    }
-}
+function correctMethodName() {
+    return "Output Message";
+};
 
-function doMore() {
-    alert('I could process more logic here');
-}
-
-function doSomethingElse() {
-    document.writeln('Test Messsage');
-}
-
-/*
 try {
-    callExternalFunction();
+    var result = wrongMethodName(3);
+    document.writeln(result);
 }
-catch(error) {
-    console.log(error.message);
+catch (error) {
+    document.writeln('An error occured');
 }
-finally {
-  close();
-}
-*/
