@@ -1,19 +1,13 @@
 
-function correctMethodName() {
-    return "Output Message";
+var worker;
+
+function startWorker() {
+    worker = new Worker("js/worker.js");
+    worker.onmessage = function(event) {
+        document.getElementById("output").innerHTML += '<li>' + event.data + '</li>';
+    };
 };
 
-try {
-    var result = wrongMethodName(3);
-    document.writeln(result);
-}
-catch (error) {
-    document.writeln('An error occured');
-}
-
-
-//show your location
-function getPositionResult(position) {
-    console.log(position.coords.latitude + ' ' + position.coords.longitude);
-}
-navigator.geolocation.getCurrentPosition(getPositionResult);
+function stopWorker() {
+    worker.terminate();
+};
