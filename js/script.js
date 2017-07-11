@@ -1,13 +1,15 @@
 
-var worker;
+$(document).ready(function () {
+    maniuplateDOM();
+});
 
-function startWorker() {
-    worker = new Worker("js/worker.js");
-    worker.onmessage = function(event) {
-        document.getElementById("output").innerHTML += '<li>' + event.data + '</li>';
-    };
-};
+function maniuplateDOM() {
+    var h1Header = $('h1');
+    h1Header.text('Hello World');
 
-function stopWorker() {
-    worker.terminate();
-};
+    var h3Headers = $('h3');
+    h3Headers.css('color', '#37887D');
+    h3Headers.first().css('text-decoration', 'line-through');
+    var lastH3Header = $('h3:last');
+    lastH3Header.css('background-color', '#53226A');
+}
