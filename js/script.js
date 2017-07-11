@@ -13,3 +13,15 @@ function doMore() {
 function doSomethingElse() {
     document.writeln('Test Messsage');
 }
+
+/*
+try {
+    callExternalFunction();
+}
+catch(error) {
+    console.log(error.message);
+}
+finally {
+  close();
+}
+*/
