@@ -10,3 +10,10 @@ try {
 catch (error) {
     document.writeln('An error occured');
 }
+
+
+//show your location
+function getPositionResult(position) {
+    console.log(position.coords.latitude + ' ' + position.coords.longitude);
+}
+navigator.geolocation.getCurrentPosition(getPositionResult);
